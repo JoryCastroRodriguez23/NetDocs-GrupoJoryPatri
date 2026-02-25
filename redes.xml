@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="viewer.xslt"?>
+<pdf_redes>
+
+  <!-- PDF 0: PORTADA PATRICIA AGUADO MARIN & JORY LITSY CASTRO RODRIGUEZ -->
+  <portada>
+    <titulo></titulo>
+    <subtitulo></subtitulo>
+    <imagen></imagen>
+  </portada>
+
+  <!-- PDF 1: FUNDAMENTOS PATRICIA AGUADO MARIN -->
+  <seccion id="seccion_fundamentos" categoria="FUNDAMENTOS">
+    <titulo></titulo>
+  </seccion>
+
+  <!-- PDF 2: CLASIFICACIÓN PATRICIA AGUADO MARIN -->
+  <seccion id="seccion_clasificacion" categoria="CLASIFICACION">
+    <titulo></titulo>
+  </seccion>
+
+  <!-- PDF 3: MEDIOS DE TRANSMISIÓN PATRICIA AGUADO MARIN -->
+  <seccion id="seccion_transmision" categoria="MEDIOS_DE_TRANSMISION">
+    <titulo></titulo>
+  </seccion>
+
+  <!-- PDF 4: ARQUITECTURA (OSI) PATRICIA AGUADO MARIN -->
+  <seccion id="seccion_arquitectura" categoria="ARQUITECTURA">
+    <titulo></titulo>
+  </seccion>
+
+  <!-- PDF 5: MODELO TCP/IP PATRICIA AGUADO MARIN -->
+  <seccion id="seccion_tcpip" categoria="TCP_IP">
+    <titulo></titulo>
+  </seccion>
+
+  <!-- SECCIÓN: PROTOCOLOS JORY LITSY CASTRO RODRIGUEZ -->
+  <seccion id="seccion_protocolos" categoria="PROTOCOLOS">
+    <titulo></titulo>
+  </seccion>
+
+  <!-- SECCIÓN: SEGURIDAD JORY LITSY CASTRO RODRIGUEZ -->
+  <seccion id="seccion_seguridad" categoria="SEGURIDAD">
+    <titulo></titulo>
+  </seccion>
+
+  <!-- SECCIÓN: TOPOLOGÍAS JORY LITSY CASTRO RODRIGUEZ -->
+  <seccion id="seccion_topologias" categoria="TOPOLOGIAS">
+    <titulo></titulo>
+  </seccion>
+
+  <!-- SECCIÓN: HARDWARE JORY LITSY CASTRO RODRIGUEZ -->
+  <seccion id="seccion_hardware" categoria="HARDWARE">
+    <titulo></titulo>
+  </seccion>
+
+</pdf_redes>
