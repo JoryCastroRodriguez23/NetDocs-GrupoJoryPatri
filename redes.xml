@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="viewer.xslt"?>
+<?xml-stylesheet type="text/xsl" href="estilo.xsl"?>
 <pdf_redes>
 
   <!-- PDF 0: PORTADA PATRICIA AGUADO MARIN & JORY LITSY CASTRO RODRIGUEZ -->
   <portada>
-    <titulo></titulo>
-    <subtitulo></subtitulo>
-    <imagen></imagen>
+    <titulo>Características de las Redes de Computadoras</titulo>
+    <subtitulo>Una exploración completa de los fundamentos de la conectividad digital: desde los conceptos básicos hasta las arquitecturas modernas que sustentan nuestra sociedad interconectada</subtitulo>
   </portada>
 
   <!-- PDF 1: FUNDAMENTOS PATRICIA AGUADO MARIN -->
