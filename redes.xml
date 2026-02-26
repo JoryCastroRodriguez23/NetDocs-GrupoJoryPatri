@@ -134,7 +134,58 @@
 
   <!-- SECCIÓN: SEGURIDAD JORY LITSY CASTRO RODRIGUEZ -->
   <seccion id="seccion_seguridad" categoria="SEGURIDAD">
-    <titulo></titulo>
+    <titulo>Seguridad en Protocolos y Redes</titulo>
+     <descripcion>
+            Proteger los datos en tránsito y en reposo es fundamental en el mundo actual de ciberamenazas constantes.
+            Las redes modernas implementan múltiples capas de seguridad para defenderse contra ataques cada vez más sofisticados.
+        </descripcion>
+
+        <tecnologias_seguridad>
+            <titulo>Tecnologías de Seguridad</titulo>
+
+            <tecnologia id="https">
+                <nombre>HTTPS (HTTP Secure)</nombre>
+                <descripcion>
+                    Combina HTTP con cifrado SSL/TLS (Secure Sockets Layer / Transport Layer Security).
+                    Cifra toda la comunicación entre navegador y servidor web, protegiendo contraseñas,
+                    datos bancarios y comunicaciones privadas.
+                </descripcion>
+            </tecnologia>
+
+            <tecnologia id="vpn_ipsec">
+                <nombre>VPN / IPsec</nombre>
+                <descripcion>
+                    Las VPNs crean "túneles" cifrados sobre redes públicas, permitiendo acceso remoto seguro.
+                    IPsec cifra cada paquete IP, protegiendo confidencialidad e integridad.
+                </descripcion>
+            </tecnologia>
+
+            <tecnologia id="firewalls">
+                <nombre>Firewalls</nombre>
+                <descripcion>
+                    Dispositivos o software que filtran el tráfico según reglas predefinidas.
+                    Bloquean accesos no autorizados y analizan IPs, puertos y protocolos.
+                </descripcion>
+            </tecnologia>
+
+            <tecnologia id="wpa3">
+                <nombre>WPA3</nombre>
+                <descripcion>
+                    Estándar moderno de seguridad Wi-Fi. Mejora WPA2 con cifrado más robusto
+                    y mayor protección contra ataques de fuerza bruta.
+                </descripcion>
+            </tecnologia>
+        </tecnologias_seguridad>
+
+        <principio_defensa_profundidad>
+            <titulo>Principio de Defensa en Profundidad</titulo>
+            <descripcion>
+                La seguridad no depende de una sola tecnología, sino de múltiples capas:
+                cifrado (HTTPS, VPN), control de acceso (Firewalls), seguridad Wi-Fi (WPA3),
+                actualizaciones y sistemas IDS/IPS.
+            </descripcion>
+        </principio_defensa_profundidad>
+
   </seccion>
 
   <!-- SECCIÓN: TOPOLOGÍAS JORY LITSY CASTRO RODRIGUEZ -->
