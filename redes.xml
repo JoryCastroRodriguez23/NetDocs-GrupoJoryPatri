@@ -40,7 +40,8 @@
                 <nombre>Red de Área Personal (PAN)</nombre>
                 <alcance>Alcance de pocos metros, generalmente hasta 10m.</alcance>
                 <descripcion>Conecta dispositivos personales cercanos al usuario.</descripcion>
-                <ejemplo>Ejemplo típico: Bluetooth conectando un smartwatch, auriculares inalámbricos o teclado al teléfono móvil.</ejemplo>
+                <ejemplo>Ejemplo típico: Bluetooth conectan
+                  do un smartwatch, auriculares inalámbricos o teclado al teléfono móvil.</ejemplo>
                 <tecnologias>Tecnologías: Bluetooth, NFC, USB.</tecnologias>
             </tipo_red>
             <tipo_red id="red_LAN">
@@ -64,8 +65,76 @@
 
   <!-- PDF 3: MEDIOS DE TRANSMISIÓN PATRICIA AGUADO MARIN -->
   <seccion id="seccion_transmision" categoria="MEDIOS_DE_TRANSMISION">
-    <titulo></titulo>
-  </seccion>
+        <titulo>Tipos de Conexión: Guiadas e Inalámbricas</titulo>
+        <conexiones_por_cable>
+            <titulo>Conexiones por Cable (Medios Guiados)</titulo> <!-- Conexiones por cable -->
+            <descripcion>Las conexiones físicas ofrecen mayor estabilidad, seguridad y velocidades predecibles, aunque limitan la movilidad.</descripcion>
+            <tipo_cable id="cable_ethernet">
+                <nombre>Ethernet (Par Trenzado)</nombre> <!-- Par trenzado-->
+                <descripcion>El estándar dominante en redes LAN. Utiliza cables de cobre con pares de hilos trenzados que reducen interferencias electromagnéticas.</descripcion>
+                <categorias>
+                    <categoria id="cat5e"> <!-- Par trenzado-->
+                        <nombre>Cat5e</nombre>
+                        <velocidad>Hasta 1 Gbps</velocidad>
+                        <distancia_maxima>100 metros</distancia_maxima>
+                    </categoria>
+                    <categoria id="cat6"> <!-- Par trenzado-->
+                        <nombre>Cat6</nombre>
+                        <velocidad>Hasta 10 Gbps en distancias cortas</velocidad>
+                        <distancia_maxima>55 metros a 10Gbps</distancia_maxima>
+                    </categoria>
+                    <categoria id="cat6a_cat7"> <!-- Par trenzado-->
+                        <nombre>Cat6a/Cat7</nombre>
+                        <velocidad>10 Gbps sostenidos</velocidad>
+                        <distancia_maxima>Blindaje mejorado</distancia_maxima>
+                    </categoria>
+                </categorias>
+                <ventajas>Alta velocidad, bajo coste, estabilidad</ventajas>
+                <uso>Oficinas, hogares, centros de datos</uso>
+            </tipo_cable>
+            
+            <tipo_cable id="cable_fibra_optica"> <!-- Fibra óptica-->
+                <nombre>Fibra Óptica</nombre>
+                <descripcion>Transmite datos mediante pulsos de luz a través de filamentos de vidrio o plástico ultrapuros. Tecnología de mayor rendimiento disponible.</descripcion>
+                <tipos_fibra>
+                    <fibra id="monomodo"> <!-- Fibra óptica-->
+                        <nombre>Monomodo</nombre>
+                        <caracteristica>Un solo haz de luz</caracteristica>
+                        <distancia>largas distancias (100+ km)</distancia>
+                        <coste>costosa</coste>
+                    </fibra>
+                    <fibra id="multimodo"> <!-- Fibra óptica-->
+                        <nombre>Multimodo</nombre>
+                        <caracteristica>Múltiples haces</caracteristica>
+                        <distancia>distancias cortas (2 km)</distancia>
+                        <coste>más económica</coste>
+                    </fibra>
+                </tipos_fibra>
+                <ventajas>Velocidades de Terabits/s, inmune a interferencias, distancias enormes</ventajas>
+                <uso>Redes troncales, ISPs, datacenters</uso>
+            </tipo_cable>
+        </conexiones_por_cable>
+        
+        <conexiones_inalambricas> <!-- Conexiones inalámbricas-->
+            <titulo>Conexiones Inalámbricas (Medios No Guiados)</titulo>
+            <descripcion>Utilizan ondas electromagnéticas para transmitir datos sin cables físicos, proporcionando movilidad y flexibilidad.</descripcion>
+            
+            <tipo_inalambrico id="wifi">
+                <nombre>Wi-Fi (IEEE 802.11)</nombre>
+                <descripcion>Utiliza ondas de radio en las bandas de 2.4 GHz, 5 GHz y 6 GHz (Wi-Fi 6E). Permite movilidad total dentro del área de cobertura.</descripcion>
+                <alcance>30-100 metros (interior/exterior).</alcance>
+                <velocidad>Hasta 9.6 Gbps (802.11ax Wi-Fi 6).</velocidad>
+                <ventaja>Flexibilidad para dispositivos móviles.</ventaja>
+                <desventajas>Susceptible a interferencias, menor seguridad que cable, velocidad variable según distancia y obstáculos.</desventajas>
+            </tipo_inalambrico>
+            
+            <tipo_inalambrico id="hibridas">
+                <nombre>Redes híbridas (3G/4G/5G)</nombre>
+                <descripcion>Combinan lo mejor de ambos mundos: conexiones cableadas para equipos fijos que requieren máximo rendimiento y Wi-Fi para dispositivos móviles.</descripcion>
+                <ejemplo>Ejemplo típico: Una oficina con servidores y PCs de escritorio conectados por Ethernet Gigabit, pero portátiles, tablets y smartphones usando Wi-Fi 6 para movilidad. Esta es la configuración más común y recomendada actualmente.</ejemplo>
+            </tipo_inalambrico>
+        </conexiones_inalambricas>
+    </seccion>
 
   <!-- PDF 4: ARQUITECTURA (OSI) PATRICIA AGUADO MARIN -->
   <seccion id="seccion_arquitectura" categoria="ARQUITECTURA">
