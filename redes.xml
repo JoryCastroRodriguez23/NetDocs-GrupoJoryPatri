@@ -190,7 +190,108 @@
 
   <!-- SECCIÓN: TOPOLOGÍAS JORY LITSY CASTRO RODRIGUEZ -->
   <seccion id="seccion_topologias" categoria="TOPOLOGIAS">
-    <titulo></titulo>
+    <titulo>Topologías de Red y Modos de Conexión</titulo>
+    <descripcion>
+            La topología define la estructura física o lógica en la que están conectados los dispositivos.
+            Cada topología tiene ventajas, desventajas y casos de uso específicos.
+        </descripcion>
+
+        <topologias>
+            <topologia id="bus">
+                <nombre>Bus</nombre>
+                <descripcion>Un solo cable central (backbone) al que todos los dispositivos se conectan.</descripcion>
+                <ventaja>Simplicidad, bajo coste.</ventaja>
+                <desventaja>Si el cable central se rompe, toda la red cae.</desventaja>
+                <estado>Obsoleta actualmente, se usaba en redes Ethernet antiguas (10Base2).</estado>
+            </topologia>
+
+            <topologia id="estrella">
+                <nombre>Estrella</nombre>
+                <descripcion>Todos los dispositivos conectados a un punto central (Switch o Hub).</descripcion>
+                <ventaja>Si falla un cable, solo ese dispositivo se desconecta; el resto funciona. Fácil diagnóstico y escalabilidad.</ventaja>
+                <desventaja>El punto central es crítico.</desventaja>
+                <estado>Estándar actual en LANs Ethernet.</estado>
+            </topologia>
+
+            <topologia id="anillo">
+                <nombre>Anillo</nombre>
+                <descripcion>Circuito cerrado donde los datos viajan en una dirección (o bidireccional en anillo dual). Cada nodo regenera la señal.</descripcion>
+                <ventaja>Flujo de datos ordenado (sin colisiones).</ventaja>
+                <desventaja>Si un nodo falla, puede romper el ciclo (lento de recuperar).</desventaja>
+                <uso_historico>Token Ring de IBM, FDDI en fibra óptica. Poco común hoy, reemplazada por estrella.</uso_historico>
+            </topologia>
+
+            <topologia id="malla">
+                <nombre>Malla (Mesh)</nombre>
+                <descripcion>Todos (o muchos) nodos conectados entre sí directamente.</descripcion>
+                <ventaja>Máxima redundancia y robustez. Si falla un enlace, los datos toman rutas alternativas.</ventaja>
+                <desventaja>Coste alto.</desventaja>
+                <uso>Redes críticas (militares, satélites), Internet backbone, redes de sensores.</uso>
+            </topologia>
+
+            <topologia id="arbol">
+                <nombre>Árbol (Jerárquica)</nombre>
+                <descripcion>Múltiples topologías en estrella conectadas jerárquicamente a un backbone central.</descripcion>
+                <ventaja>Escalable, organizada por jerarquías (departamentos, plantas).</ventaja>
+                <uso>Edificios grandes, campus universitarios, empresas con estructura por divisiones.</uso>
+            </topologia>
+        </topologias>
+
+        <modos_conexion>
+            <titulo>Modos de Conexión (Lógica de Comunicación)</titulo>
+
+            <modo id="orientado_conexion">
+                <nombre>Orientado a Conexión (Connection-Oriented)</nombre>
+                <protocolo_ejemplo>TCP</protocolo_ejemplo>
+                <funcionamiento>"Llama antes de hablar". Establece un canal dedicado mediante triple apretón de manos (SYN, SYN-ACK, ACK) antes de transmitir datos.</funcionamiento>
+                <caracteristicas>Garantiza orden y llegada de datos. Retransmite paquetes perdidos. Control de flujo y congestión.</caracteristicas>
+                <ventajas>Alta fiabilidad, integridad garantizada.</ventajas>
+                <desventajas>Mayor latencia debido a confirmaciones y establecimiento de sesión.</desventajas>
+            </modo>
+
+            <modo id="sin_conexion">
+                <nombre>Sin Conexión (Connectionless)</nombre>
+                <protocolo_ejemplo>UDP</protocolo_ejemplo>
+                <funcionamiento>"Envía y olvida". No establece sesión previa. Cada paquete viaja independientemente.</funcionamiento>
+                <caracteristicas>No confirma recepción. No garantiza orden ni entrega.</caracteristicas>
+                <ventajas>Máxima velocidad, mínima latencia, ideal para tiempo real.</ventajas>
+                <desventajas>Puede perder datos. La aplicación debe manejar posibles pérdidas.</desventajas>
+                <uso_ideal>Streaming, videollamadas, juegos online donde velocidad perfección.</uso_ideal>
+            </modo>
+        </modos_conexion>
+
+        <tabla_topologias>
+            <titulo>Tabla de Topologías de Red</titulo>
+            <descripcion>Aquí se contrastan las formas físicas de conectar los equipos.</descripcion>
+
+            <fila id="top_bus">
+                <topologia>Bus</topologia>
+                <descripcion_visual>Un solo cable central (troncal) con dispositivos a los lados.</descripcion_visual>
+                <ventaja_principal>Muy barato y fácil de instalar.</ventaja_principal>
+                <desventaja_principal>Si el cable central se rompe, toda la red cae.</desventaja_principal>
+            </fila>
+
+            <fila id="top_estrella">
+                <topologia>Estrella</topologia>
+                <descripcion_visual>Todos los cables van a un punto central (Switch).</descripcion_visual>
+                <ventaja_principal>Fácil de gestionar; si falla un PC, el resto sigue funcionando.</ventaja_principal>
+                <desventaja_principal>Depende totalmente del Switch central; es más costoso en cableado.</desventaja_principal>
+            </fila>
+
+            <fila id="top_anillo">
+                <topologia>Anillo</topologia>
+                <descripcion_visual>Círculo cerrado de dispositivos.</descripcion_visual>
+                <ventaja_principal>Flujo de datos ordenado (sin colisiones).</ventaja_principal>
+                <desventaja_principal>Si un nodo falla, puede romper el ciclo (lento de recuperar).</desventaja_principal>
+            </fila>
+
+            <fila id="top_malla">
+                <topologia>Malla</topologia>
+                <descripcion_visual>Conexiones múltiples entre todos los nodos.</descripcion_visual>
+                <ventaja_principal>Robustez total. Si falla una ruta, hay otras.</ventaja_principal>
+                <desventaja_principal>Es la más cara y compleja de instalar.</desventaja_principal>
+            </fila>
+        </tabla_topologias>
   </seccion>
 
   <!-- SECCIÓN: HARDWARE JORY LITSY CASTRO RODRIGUEZ -->
