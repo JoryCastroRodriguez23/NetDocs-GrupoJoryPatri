@@ -33,8 +33,34 @@
 
   <!-- PDF 2: CLASIFICACIÓN PATRICIA AGUADO MARIN -->
   <seccion id="seccion_clasificacion" categoria="CLASIFICACION">
-    <titulo></titulo>
-  </seccion>
+        <titulo>Clasificación de Redes según su Alcance Geográfico</titulo>
+        <descripcion>Las redes se clasifican principalmente por el área geográfica que cubren, determinando sus características técnicas, velocidad de transmisión y casos de uso específicos.</descripcion>
+        <clasificacion_red>
+            <tipo_red id="red_PAN">
+                <nombre>Red de Área Personal (PAN)</nombre>
+                <alcance>Alcance de pocos metros, generalmente hasta 10m.</alcance>
+                <descripcion>Conecta dispositivos personales cercanos al usuario.</descripcion>
+                <ejemplo>Ejemplo típico: Bluetooth conectando un smartwatch, auriculares inalámbricos o teclado al teléfono móvil.</ejemplo>
+                <tecnologias>Tecnologías: Bluetooth, NFC, USB.</tecnologias>
+            </tipo_red>
+            <tipo_red id="red_LAN">
+                <nombre>Red de Área Local (LAN)</nombre>
+                <alcance>Cubre edificios individuales o campus pequeños (hasta 1-2 km).</alcance>
+                <descripcion>Alta velocidad y bajo coste.</descripcion>
+                <ejemplo>Ejemplo típico: La red Wi-Fi y Ethernet de una oficina, casa, escuela o centro comercial. Permite compartir impresoras, archivos y conexión a Internet.</ejemplo>
+            </tipo_red>
+            <tipo_red id="red_MAN">
+                <nombre>Red de Área Metropolitana (MAN)</nombre>
+                <alcance>Cobertura del tamaño de una ciudad completa (hasta 50 km).</alcance>
+                <ejemplo>Ejemplo típico: Red que interconecta varios campus universitarios dispersos en una misma ciudad, o red de fibra óptica municipal que conecta edificios gubernamentales.</ejemplo>
+            </tipo_red>
+            <tipo_red id="red_WAN">
+                <nombre>Red de Área Amplia (WAN)</nombre>
+                <alcance>Alcance global, continental o incluso mundial.</alcance>
+                <ejemplo>Ejemplo típico: Internet es la WAN más grande del mundo. También redes corporativas multinacionales que conectan oficinas en diferentes países y continentes mediante enlaces satelitales y cables submarinos.</ejemplo>
+            </tipo_red>
+        </clasificacion_red>
+    </seccion>
 
   <!-- PDF 3: MEDIOS DE TRANSMISIÓN PATRICIA AGUADO MARIN -->
   <seccion id="seccion_transmision" categoria="MEDIOS_DE_TRANSMISION">
