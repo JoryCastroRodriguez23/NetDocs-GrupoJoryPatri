@@ -10,8 +10,26 @@
 
   <!-- PDF 1: FUNDAMENTOS PATRICIA AGUADO MARIN -->
   <seccion id="seccion_fundamentos" categoria="FUNDAMENTOS">
-    <titulo></titulo>
-  </seccion>
+        <titulo>Definición y Propiedades Clave de las Redes</titulo>
+        <definicion>Una red de computadoras es un conjunto de dispositivos interconectados que comparten recursos (impresoras, servidores, almacenamiento) e información de manera eficiente. Esta infraestructura digital es el pilar fundamental que permite la comunicación global instantánea y el intercambio de datos en tiempo real.</definicion>
+        <propiedades_clave>
+            <propiedad_clave id="propiedad_01">
+                <nombre>Interoperabilidad</nombre>
+                <definicion>Capacidad crucial de conectar equipos de distintos fabricantes y sistemas operativos sin incompatibilidades.</definicion>
+                <ejemplo>Un ordenador Windows puede colaborar perfectamente con un Mac, un servidor Linux y dispositivos Android en la misma red gracias a protocolos estándar y arquitecturas abiertas.</ejemplo>
+            </propiedad_clave>
+            <propiedad_clave id="propiedad_02">
+                <nombre>Escalabilidad</nombre>
+                <definicion>La red debe poder crecer y adaptarse a las necesidades cambiantes de la organización.</definicion>
+                <ejemplo>Esto significa añadir nuevos usuarios, dispositivos o servicios sin degradar el rendimiento existente. Una red escalable se diseña pensando en el futuro, con margen de crecimiento en ancho de banda y capacidad de procesamiento.</ejemplo>
+            </propiedad_clave>
+            <propiedad_clave id="propiedad_03">
+                <nombre>Seguridad</nombre>
+                <definicion>Protección integral contra amenazas digitales (malware, phishing, ataques DDoS, ransomware) mediante múltiples capas de defensa.</definicion>
+                <ejemplo>Firewalls que filtran tráfico no autorizado, cifrado de datos en tránsito, VPNs para conexiones remotas seguras, y sistemas de detección de intrusiones.</ejemplo>
+            </propiedad_clave>
+        </propiedades_clave>
+    </seccion>
 
   <!-- PDF 2: CLASIFICACIÓN PATRICIA AGUADO MARIN -->
   <seccion id="seccion_clasificacion" categoria="CLASIFICACION">
