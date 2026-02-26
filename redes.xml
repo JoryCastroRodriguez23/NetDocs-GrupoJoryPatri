@@ -4,35 +4,232 @@
 
   <!-- PDF 0: PORTADA PATRICIA AGUADO MARIN & JORY LITSY CASTRO RODRIGUEZ -->
   <portada>
-    <titulo></titulo>
-    <subtitulo></subtitulo>
-    <imagen></imagen>
+    <titulo>Características de las Redes de Computadoras</titulo>
+    <subtitulo>Una exploración completa de los fundamentos de la conectividad digital: desde los conceptos básicos hasta las arquitecturas modernas que sustentan nuestra sociedad interconectada</subtitulo>
   </portada>
 
   <!-- PDF 1: FUNDAMENTOS PATRICIA AGUADO MARIN -->
   <seccion id="seccion_fundamentos" categoria="FUNDAMENTOS">
-    <titulo></titulo>
-  </seccion>
+        <titulo>Definición y Propiedades Clave de las Redes</titulo>
+        <definicion>Una red de computadoras es un conjunto de dispositivos interconectados que comparten recursos (impresoras, servidores, almacenamiento) e información de manera eficiente. Esta infraestructura digital es el pilar fundamental que permite la comunicación global instantánea y el intercambio de datos en tiempo real.</definicion>
+        <propiedades_clave>
+            <propiedad_clave id="propiedad_01">
+                <nombre>Interoperabilidad</nombre>
+                <definicion>Capacidad crucial de conectar equipos de distintos fabricantes y sistemas operativos sin incompatibilidades.</definicion>
+                <ejemplo>Un ordenador Windows puede colaborar perfectamente con un Mac, un servidor Linux y dispositivos Android en la misma red gracias a protocolos estándar y arquitecturas abiertas.</ejemplo>
+            </propiedad_clave>
+            <propiedad_clave id="propiedad_02">
+                <nombre>Escalabilidad</nombre>
+                <definicion>La red debe poder crecer y adaptarse a las necesidades cambiantes de la organización.</definicion>
+                <ejemplo>Esto significa añadir nuevos usuarios, dispositivos o servicios sin degradar el rendimiento existente. Una red escalable se diseña pensando en el futuro, con margen de crecimiento en ancho de banda y capacidad de procesamiento.</ejemplo>
+            </propiedad_clave>
+            <propiedad_clave id="propiedad_03">
+                <nombre>Seguridad</nombre>
+                <definicion>Protección integral contra amenazas digitales (malware, phishing, ataques DDoS, ransomware) mediante múltiples capas de defensa.</definicion>
+                <ejemplo>Firewalls que filtran tráfico no autorizado, cifrado de datos en tránsito, VPNs para conexiones remotas seguras, y sistemas de detección de intrusiones.</ejemplo>
+            </propiedad_clave>
+        </propiedades_clave>
+    </seccion>
 
   <!-- PDF 2: CLASIFICACIÓN PATRICIA AGUADO MARIN -->
   <seccion id="seccion_clasificacion" categoria="CLASIFICACION">
-    <titulo></titulo>
-  </seccion>
+        <titulo>Clasificación de Redes según su Alcance Geográfico</titulo>
+        <descripcion>Las redes se clasifican principalmente por el área geográfica que cubren, determinando sus características técnicas, velocidad de transmisión y casos de uso específicos.</descripcion>
+        <clasificacion_red>
+            <tipo_red id="red_PAN">
+                <nombre>Red de Área Personal (PAN)</nombre>
+                <alcance>Alcance de pocos metros, generalmente hasta 10m.</alcance>
+                <descripcion>Conecta dispositivos personales cercanos al usuario.</descripcion>
+                <ejemplo>Ejemplo típico: Bluetooth conectan
+                  do un smartwatch, auriculares inalámbricos o teclado al teléfono móvil.</ejemplo>
+                <tecnologias>Tecnologías: Bluetooth, NFC, USB.</tecnologias>
+            </tipo_red>
+            <tipo_red id="red_LAN">
+                <nombre>Red de Área Local (LAN)</nombre>
+                <alcance>Cubre edificios individuales o campus pequeños (hasta 1-2 km).</alcance>
+                <descripcion>Alta velocidad y bajo coste.</descripcion>
+                <ejemplo>Ejemplo típico: La red Wi-Fi y Ethernet de una oficina, casa, escuela o centro comercial. Permite compartir impresoras, archivos y conexión a Internet.</ejemplo>
+            </tipo_red>
+            <tipo_red id="red_MAN">
+                <nombre>Red de Área Metropolitana (MAN)</nombre>
+                <alcance>Cobertura del tamaño de una ciudad completa (hasta 50 km).</alcance>
+                <ejemplo>Ejemplo típico: Red que interconecta varios campus universitarios dispersos en una misma ciudad, o red de fibra óptica municipal que conecta edificios gubernamentales.</ejemplo>
+            </tipo_red>
+            <tipo_red id="red_WAN">
+                <nombre>Red de Área Amplia (WAN)</nombre>
+                <alcance>Alcance global, continental o incluso mundial.</alcance>
+                <ejemplo>Ejemplo típico: Internet es la WAN más grande del mundo. También redes corporativas multinacionales que conectan oficinas en diferentes países y continentes mediante enlaces satelitales y cables submarinos.</ejemplo>
+            </tipo_red>
+        </clasificacion_red>
+    </seccion>
 
   <!-- PDF 3: MEDIOS DE TRANSMISIÓN PATRICIA AGUADO MARIN -->
   <seccion id="seccion_transmision" categoria="MEDIOS_DE_TRANSMISION">
-    <titulo></titulo>
-  </seccion>
+        <titulo>Tipos de Conexión: Guiadas e Inalámbricas</titulo>
+        <conexiones_por_cable>
+            <titulo>Conexiones por Cable (Medios Guiados)</titulo> <!-- Conexiones por cable -->
+            <descripcion>Las conexiones físicas ofrecen mayor estabilidad, seguridad y velocidades predecibles, aunque limitan la movilidad.</descripcion>
+            <tipo_cable id="cable_ethernet">
+                <nombre>Ethernet (Par Trenzado)</nombre> <!-- Par trenzado-->
+                <descripcion>El estándar dominante en redes LAN. Utiliza cables de cobre con pares de hilos trenzados que reducen interferencias electromagnéticas.</descripcion>
+                <categorias>
+                    <categoria id="cat5e"> <!-- Par trenzado-->
+                        <nombre>Cat5e</nombre>
+                        <velocidad>Hasta 1 Gbps</velocidad>
+                        <distancia_maxima>100 metros</distancia_maxima>
+                    </categoria>
+                    <categoria id="cat6"> <!-- Par trenzado-->
+                        <nombre>Cat6</nombre>
+                        <velocidad>Hasta 10 Gbps en distancias cortas</velocidad>
+                        <distancia_maxima>55 metros a 10Gbps</distancia_maxima>
+                    </categoria>
+                    <categoria id="cat6a_cat7"> <!-- Par trenzado-->
+                        <nombre>Cat6a/Cat7</nombre>
+                        <velocidad>10 Gbps sostenidos</velocidad>
+                        <distancia_maxima>Blindaje mejorado</distancia_maxima>
+                    </categoria>
+                </categorias>
+                <ventajas>Alta velocidad, bajo coste, estabilidad</ventajas>
+                <uso>Oficinas, hogares, centros de datos</uso>
+            </tipo_cable>
+            
+            <tipo_cable id="cable_fibra_optica"> <!-- Fibra óptica-->
+                <nombre>Fibra Óptica</nombre>
+                <descripcion>Transmite datos mediante pulsos de luz a través de filamentos de vidrio o plástico ultrapuros. Tecnología de mayor rendimiento disponible.</descripcion>
+                <tipos_fibra>
+                    <fibra id="monomodo"> <!-- Fibra óptica-->
+                        <nombre>Monomodo</nombre>
+                        <caracteristica>Un solo haz de luz</caracteristica>
+                        <distancia>largas distancias (100+ km)</distancia>
+                        <coste>costosa</coste>
+                    </fibra>
+                    <fibra id="multimodo"> <!-- Fibra óptica-->
+                        <nombre>Multimodo</nombre>
+                        <caracteristica>Múltiples haces</caracteristica>
+                        <distancia>distancias cortas (2 km)</distancia>
+                        <coste>más económica</coste>
+                    </fibra>
+                </tipos_fibra>
+                <ventajas>Velocidades de Terabits/s, inmune a interferencias, distancias enormes</ventajas>
+                <uso>Redes troncales, ISPs, datacenters</uso>
+            </tipo_cable>
+        </conexiones_por_cable>
+        
+        <conexiones_inalambricas> <!-- Conexiones inalámbricas-->
+            <titulo>Conexiones Inalámbricas (Medios No Guiados)</titulo>
+            <descripcion>Utilizan ondas electromagnéticas para transmitir datos sin cables físicos, proporcionando movilidad y flexibilidad.</descripcion>
+            
+            <tipo_inalambrico id="wifi">
+                <nombre>Wi-Fi (IEEE 802.11)</nombre>
+                <descripcion>Utiliza ondas de radio en las bandas de 2.4 GHz, 5 GHz y 6 GHz (Wi-Fi 6E). Permite movilidad total dentro del área de cobertura.</descripcion>
+                <alcance>30-100 metros (interior/exterior).</alcance>
+                <velocidad>Hasta 9.6 Gbps (802.11ax Wi-Fi 6).</velocidad>
+                <ventaja>Flexibilidad para dispositivos móviles.</ventaja>
+                <desventajas>Susceptible a interferencias, menor seguridad que cable, velocidad variable según distancia y obstáculos.</desventajas>
+            </tipo_inalambrico>
+            
+            <tipo_inalambrico id="hibridas">
+                <nombre>Redes híbridas (3G/4G/5G)</nombre>
+                <descripcion>Combinan lo mejor de ambos mundos: conexiones cableadas para equipos fijos que requieren máximo rendimiento y Wi-Fi para dispositivos móviles.</descripcion>
+                <ejemplo>Ejemplo típico: Una oficina con servidores y PCs de escritorio conectados por Ethernet Gigabit, pero portátiles, tablets y smartphones usando Wi-Fi 6 para movilidad. Esta es la configuración más común y recomendada actualmente.</ejemplo>
+            </tipo_inalambrico>
+        </conexiones_inalambricas>
+    </seccion>
 
   <!-- PDF 4: ARQUITECTURA (OSI) PATRICIA AGUADO MARIN -->
   <seccion id="seccion_arquitectura" categoria="ARQUITECTURA">
-    <titulo></titulo>
-  </seccion>
+        <titulo>Modelo OSI: Las 7 Capas de la Comunicación</titulo>
+        <descripcion>El modelo OSI (Open Systems Interconnection) es un modelo estandarizado teórico y modular desarrollado por la ISO que divide el proceso de comunicación en red en 7 capas independientes.</descripcion>
+        <nota_iso>ISO (Organización Internacional de Normalización) es una entidad independiente que desarrolla y publica estándares (normas) internacionales para asegurar la calidad, seguridad y eficiencia de productos, servicios y sistemas.</nota_iso>
+        <ventaja_modular>Su diseño modular permite que si algo falla, los técnicos puedan identificar rápidamente en qué capa está el problema, facilitando el diagnóstico y la reparación.</ventaja_modular>
+        <capas_osi>
+            <capa numero="7. Aplicación">
+                <nombre>Aplicación</nombre>
+                <descripcion>Interfaz directa con el usuario final. Aquí operan navegadores web, clientes de correo, aplicaciones de mensajería.</descripcion>
+                <protocolos>HTTP, FTP, SMTP, DNS</protocolos>
+            </capa>
+            <capa numero="6. Presentación">
+                <nombre>Presentación</nombre>
+                <descripcion>Formato y representación de datos. Cifrado, compresión y conversión de formatos (JPEG, MP3, SSL/TLS). Garantiza que el emisor y receptor "hablen el mismo idioma".</descripcion>
+            </capa>
+            <capa numero="5. Sesión">
+                <nombre>Sesión</nombre>
+                <descripcion>Gestiona el diálogo entre aplicaciones. Establece, mantiene y finaliza sesiones de comunicación. Control de tokens y sincronización de datos.</descripcion>
+            </capa>
+            <capa numero="4. Transporte">
+                <nombre>Transporte</nombre>
+                <descripcion>Entrega confiable de datos extremo a extremo. Segmentación, control de flujo y corrección de errores.</descripcion>
+                <protocolos>TCP (fiable, orientado a conexión) y UDP (rápido, sin conexión)</protocolos>
+            </capa>
+            <capa numero="3. Red">
+                <nombre>Red</nombre>
+                <descripcion>Enrutamiento y direccionamiento lógico. Determina la mejor ruta para los datos a través de la red.</descripcion>
+                <protocolos>IP (IPv4/IPv6), ICMP, OSPF</protocolos>
+            </capa>
+            <capa numero="2. Enlace de Datos">
+                <nombre>Enlace de Datos</nombre>
+                <descripcion>Transmisión fiable entre nodos adyacentes. Control de acceso al medio, detección y corrección de errores.</descripcion>
+                <protocolos>Ethernet, PPP, ARP</protocolos>
+            </capa>
+            <capa numero="1. Física">
+                <nombre>Física</nombre>
+                <descripcion>Transmisión de bits a través del medio físico. Define las características eléctricas, mecánicas y de señalización.</descripcion>
+                <especificaciones>Cables Ethernet, fibra óptica, Wi-Fi</especificaciones>
+            </capa>
+        </capas_osi>
+    </seccion>
 
   <!-- PDF 5: MODELO TCP/IP PATRICIA AGUADO MARIN -->
   <seccion id="seccion_tcpip" categoria="TCP_IP">
-    <titulo></titulo>
-  </seccion>
+        <titulo>Modelo TCP/IP: El Estándar Práctico de Internet</titulo>
+        <descripcion>El modelo TCP/IP es el marco práctico sobre el que funciona Internet y la mayoría de redes modernas. A diferencia del modelo OSI (que es teórico y educativo), TCP/IP se desarrolló para implementación real y agrupa las 7 capas OSI en solo 4 capas funcionales más simples.</descripcion>
+        <tabla_comparativa>
+            <titulo>Tabla de Arquitectura de Red: Modelos OSI y TCP/IP</titulo>
+            <descripcion>Esta tabla ayuda a visualizar cómo el modelo TCP/IP agrupa las funciones del modelo OSI.</descripcion>
+            <fila id="fila_01">
+                <capa_osi>Aplicación</capa_osi>
+                <funcion_principal>Interfaz con el usuario</funcion_principal>
+                <capa_tcpip>Aplicación</capa_tcpip>
+                <protocolos_comunes>HTTP, SMTP, FTP</protocolos_comunes>
+            </fila>
+            <fila id="fila_02">
+                <capa_osi>Presentación</capa_osi>
+                <funcion_principal>Cifrado y formatos (JPG, SSL)</funcion_principal>
+                <capa_tcpip>Incluido en Aplicación</capa_tcpip>
+                <protocolos_comunes>SSL/TLS, JPEG, ASCII</protocolos_comunes>
+            </fila>
+            <fila id="fila_03">
+                <capa_osi>Sesión</capa_osi>
+                <funcion_principal>Control de diálogo</funcion_principal>
+                <capa_tcpip>Incluido en Aplicación</capa_tcpip>
+                <protocolos_comunes>RPC, NetBIOS</protocolos_comunes>
+            </fila>
+            <fila id="fila_04">
+                <capa_osi>Transporte</capa_osi>
+                <funcion_principal>Fiabilidad y segmentación</funcion_principal>
+                <capa_tcpip>Transporte</capa_tcpip>
+                <protocolos_comunes>TCP, UDP</protocolos_comunes>
+            </fila>
+            <fila id="fila_05">
+                <capa_osi>Red</capa_osi>
+                <funcion_principal>Enrutamiento (La mejor ruta)</funcion_principal>
+                <capa_tcpip>Internet</capa_tcpip>
+                <protocolos_comunes>IP, ICMP, OSPF</protocolos_comunes>
+            </fila>
+            <fila id="fila_06">
+                <capa_osi>Enlace de Datos</capa_osi>
+                <funcion_principal>Acceso al medio y MAC</funcion_principal>
+                <capa_tcpip>Acceso a la Red</capa_tcpip>
+                <protocolos_comunes>Ethernet, Wi-Fi, ARP</protocolos_comunes>
+            </fila>
+            <fila id="fila_07">
+                <capa_osi>Física</capa_osi>
+                <funcion_principal>Cables y señales eléctricas</funcion_principal>
+                <capa_tcpip>Incluido en Acceso a la Red</capa_tcpip>
+                <protocolos_comunes>Cables UTP, Fibra, Hubs</protocolos_comunes>
+            </fila>
+        </tabla_comparativa>
+    </seccion>
 
   <!-- SECCIÓN: PROTOCOLOS JORY LITSY CASTRO RODRIGUEZ -->
   <seccion id="seccion_protocolos" categoria="PROTOCOLOS">
