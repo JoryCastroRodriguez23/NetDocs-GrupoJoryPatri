@@ -138,8 +138,46 @@
 
   <!-- PDF 4: ARQUITECTURA (OSI) PATRICIA AGUADO MARIN -->
   <seccion id="seccion_arquitectura" categoria="ARQUITECTURA">
-    <titulo></titulo>
-  </seccion>
+        <titulo>Modelo OSI: Las 7 Capas de la Comunicación</titulo>
+        <descripcion>El modelo OSI (Open Systems Interconnection) es un modelo estandarizado teórico y modular desarrollado por la ISO que divide el proceso de comunicación en red en 7 capas independientes.</descripcion>
+        <nota_iso>ISO (Organización Internacional de Normalización) es una entidad independiente que desarrolla y publica estándares (normas) internacionales para asegurar la calidad, seguridad y eficiencia de productos, servicios y sistemas.</nota_iso>
+        <ventaja_modular>Su diseño modular permite que si algo falla, los técnicos puedan identificar rápidamente en qué capa está el problema, facilitando el diagnóstico y la reparación.</ventaja_modular>
+        <capas_osi>
+            <capa numero="7. Aplicación">
+                <nombre>Aplicación</nombre>
+                <descripcion>Interfaz directa con el usuario final. Aquí operan navegadores web, clientes de correo, aplicaciones de mensajería.</descripcion>
+                <protocolos>HTTP, FTP, SMTP, DNS</protocolos>
+            </capa>
+            <capa numero="6. Presentación">
+                <nombre>Presentación</nombre>
+                <descripcion>Formato y representación de datos. Cifrado, compresión y conversión de formatos (JPEG, MP3, SSL/TLS). Garantiza que el emisor y receptor "hablen el mismo idioma".</descripcion>
+            </capa>
+            <capa numero="5. Sesión">
+                <nombre>Sesión</nombre>
+                <descripcion>Gestiona el diálogo entre aplicaciones. Establece, mantiene y finaliza sesiones de comunicación. Control de tokens y sincronización de datos.</descripcion>
+            </capa>
+            <capa numero="4. Transporte">
+                <nombre>Transporte</nombre>
+                <descripcion>Entrega confiable de datos extremo a extremo. Segmentación, control de flujo y corrección de errores.</descripcion>
+                <protocolos>TCP (fiable, orientado a conexión) y UDP (rápido, sin conexión)</protocolos>
+            </capa>
+            <capa numero="3. Red">
+                <nombre>Red</nombre>
+                <descripcion>Enrutamiento y direccionamiento lógico. Determina la mejor ruta para los datos a través de la red.</descripcion>
+                <protocolos>IP (IPv4/IPv6), ICMP, OSPF</protocolos>
+            </capa>
+            <capa numero="2. Enlace de Datos">
+                <nombre>Enlace de Datos</nombre>
+                <descripcion>Transmisión fiable entre nodos adyacentes. Control de acceso al medio, detección y corrección de errores.</descripcion>
+                <protocolos>Ethernet, PPP, ARP</protocolos>
+            </capa>
+            <capa numero="1. Física">
+                <nombre>Física</nombre>
+                <descripcion>Transmisión de bits a través del medio físico. Define las características eléctricas, mecánicas y de señalización.</descripcion>
+                <especificaciones>Cables Ethernet, fibra óptica, Wi-Fi</especificaciones>
+            </capa>
+        </capas_osi>
+    </seccion>
 
   <!-- PDF 5: MODELO TCP/IP PATRICIA AGUADO MARIN -->
   <seccion id="seccion_tcpip" categoria="TCP_IP">
