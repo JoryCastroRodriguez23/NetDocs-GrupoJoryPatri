@@ -296,7 +296,157 @@
 
   <!-- SECCIÓN: HARDWARE JORY LITSY CASTRO RODRIGUEZ -->
   <seccion id="seccion_hardware" categoria="HARDWARE">
-    <titulo></titulo>
+    <titulo>Componentes de Hardware en Redes Informáticas</titulo>
   </seccion>
+
+   <descripcion>
+            Una red funcional requiere diversos componentes de hardware especializados, desde los medios físicos que transportan señales
+            hasta los dispositivos inteligentes que dirigen el tráfico.
+        </descripcion>
+
+        <medios_transmision_cableados>
+            <titulo>Medios de Transmisión Cableados</titulo>
+
+            <medio id="par_trenzado">
+                <nombre>Cable Par Trenzado (Cobre)</nombre>
+                <categorias>
+                    <categoria id="cat5e">
+                        <nombre>Cat 5e</nombre>
+                        <velocidad>Hasta 1 Gbps</velocidad>
+                        <distancia>100m máx</distancia>
+                        <uso>Hogares, oficinas pequeñas. Económico y suficiente para la mayoría.</uso>
+                    </categoria>
+                    <categoria id="cat6">
+                        <nombre>Cat 6</nombre>
+                        <velocidad>Hasta 10 Gbps en 55m, 1 Gbps en 100m</velocidad>
+                        <uso>Oficinas profesionales, estudios de diseño. Mejor blindaje contra interferencias.</uso>
+                    </categoria>
+                    <categoria id="cat6a_7">
+                        <nombre>Cat 6a/7</nombre>
+                        <velocidad>10 Gbps sostenidos en 100m</velocidad>
+                        <uso>Datacenters, infraestructuras exigentes. Máximo blindaje (S/FTP).</uso>
+                    </categoria>
+                </categorias>
+            </medio>
+
+            <medio id="fibra_optica_hw">
+                <nombre>Fibra Óptica (Transmisión por Luz)</nombre>
+                <tipos>
+                    <tipo id="monomodo">
+                        <nombre>Monomodo (SMF)</nombre>
+                        <nucleo>9 micrómetros</nucleo>
+                        <caracteristica>Un solo haz de luz</caracteristica>
+                        <distancias>40-100+ km sin repetidores</distancias>
+                        <uso>Enlaces troncales ISP, conexiones entre ciudades, cables submarinos intercontinentales. Láser de alta precisión.</uso>
+                    </tipo>
+                    <tipo id="multimodo">
+                        <nombre>Multimodo (MMF)</nombre>
+                        <nucleo>50-62.5 micrómetros</nucleo>
+                        <caracteristica>Múltiples haces de luz</caracteristica>
+                        <distancias>Hasta 2 km</distancias>
+                        <uso>Campus, edificios, datacenters internos. LED más económico.</uso>
+                        <velocidades>10/40/100 Gbps</velocidades>
+                    </tipo>
+                </tipos>
+                <ventajas>Inmunidad total a interferencias electromagnéticas, sin diafonía, distancias enormes, ancho de banda masivo (Terabits/s), seguridad (difícil interceptar luz).</ventajas>
+                <desventaja>Coste inicial más alto, requiere técnicos especializados para empalmes.</desventaja>
+            </medio>
+        </medios_transmision_cableados>
+
+        <evolucion_wifi>
+            <titulo>Evolución de los Estándares Wi-Fi (802.11)</titulo>
+            <descripcion>El Wi-Fi ha evolucionado dramáticamente en velocidad, eficiencia y capacidad de gestionar dispositivos simultáneos.</descripcion>
+
+            <estandar id="wifi_bg" orden="1">
+                <nombre>802.11b/g</nombre>
+                <banda>2.4 GHz</banda>
+                <velocidad>11-54 Mbps</velocidad>
+                <problema>Banda saturadísima (interferencias con microondas, Bluetooth, teléfonos inalámbricos).</problema>
+                <estado>Obsoleto.</estado>
+            </estandar>
+
+            <estandar id="wifi_n" orden="2">
+                <nombre>802.11n (Wi-Fi 4)</nombre>
+                <banda>Dual: 2.4 y 5 GHz</banda>
+                <velocidad>Hasta 600 Mbps</velocidad>
+                <tecnologia>Introduce MIMO (Multiple Input Multiple Output): múltiples antenas para mejor rendimiento.</tecnologia>
+                <nota>Gran avance en velocidad.</nota>
+            </estandar>
+
+            <estandar id="wifi_ac" orden="3">
+                <nombre>802.11ac (Wi-Fi 5)</nombre>
+                <banda>Solo 5 GHz</banda>
+                <velocidad>Hasta 3.5 Gbps</velocidad>
+                <tecnologia>MU-MIMO (Multi-User MIMO) y Beamforming.</tecnologia>
+                <periodo>Estándar dominante 2013-2019.</periodo>
+            </estandar>
+
+            <estandar id="wifi_ax" orden="4">
+                <nombre>802.11ax (Wi-Fi 6/6E)</nombre>
+                <bandas>2.4, 5 y 6 GHz (6E)</bandas>
+                <velocidad>Hasta 9.6 Gbps</velocidad>
+                <tecnologia>OFDMA y TWT (Target Wake Time) para eficiencia y ahorro en IoT.</tecnologia>
+                <uso_ideal>Ambientes densos: estadios, aeropuertos, hogares con 50+ dispositivos IoT.</uso_ideal>
+                <nota>El futuro es Wi-Fi 6E.</nota>
+            </estandar>
+        </evolucion_wifi>
+
+        <tabla_componentes_red>
+            <titulo>Tabla de Componentes de una Red</titulo>
+            <descripcion>Para diferenciar rápidamente entre los tipos de cables y ondas.</descripcion>
+
+            <fila id="comp_utp">
+                <medio>Cable Par Trenzado (UTP)</medio>
+                <tipo>Guiado (Cobre)</tipo>
+                <velocidad_alcance>1 Gbps - 10 Gbps (Corto alcance &lt;100m)</velocidad_alcance>
+                <caso_uso>Redes LAN de oficinas, conexión de PC a Switch.</caso_uso>
+            </fila>
+
+            <fila id="comp_fibra">
+                <medio>Fibra Óptica</medio>
+                <tipo>Guiado (Luz)</tipo>
+                <velocidad_alcance>&gt;100 Gbps (Largo alcance, kms)</velocidad_alcance>
+                <caso_uso>Redes troncales (WAN), conexiones entre edificios o ciudades.</caso_uso>
+            </fila>
+
+            <fila id="comp_wifi">
+                <medio>Wi-Fi (802.11)</medio>
+                <tipo>No Guiado (Radio)</tipo>
+                <velocidad_alcance>Variable (depende de obstáculos)</velocidad_alcance>
+                <caso_uso>Dispositivos móviles, portátiles, zonas comunes.</caso_uso>
+            </fila>
+
+            <fila id="comp_microondas">
+                <medio>Microondas</medio>
+                <tipo>No Guiado (Ondas)</tipo>
+                <velocidad_alcance>Largo alcance (línea de vista)</velocidad_alcance>
+                <caso_uso>Conectar dos edificios lejanos sin poner cables físicos.</caso_uso>
+            </fila>
+        </tabla_componentes_red>
+
+        <tabla_redes_inalambricas>
+            <titulo>Tabla de Redes Inalámbricas</titulo>
+
+            <fila id="wifi_tabla_n">
+                <estandar>802.11n</estandar>
+                <nombre_comun>Wi-Fi 4</nombre_comun>
+                <frecuencia>2.4 GHz y 5 GHz</frecuencia>
+                <caracteristica_clave>Primer gran salto de velocidad (MIMO).</caracteristica_clave>
+            </fila>
+
+            <fila id="wifi_tabla_ac">
+                <estandar>802.11ac</estandar>
+                <nombre_comun>Wi-Fi 5</nombre_comun>
+                <frecuencia>Solo 5 GHz</frecuencia>
+                <caracteristica_clave>Alta velocidad, ideal para video HD.</caracteristica_clave>
+            </fila>
+
+            <fila id="wifi_tabla_ax">
+                <estandar>802.11ax</estandar>
+                <nombre_comun>Wi-Fi 6</nombre_comun>
+                <frecuencia>2.4 GHz y 5 GHz</frecuencia>
+                <caracteristica_clave>Eficiencia. Diseñado para muchos dispositivos a la vez (IoT).</caracteristica_clave>
+            </fila>
+        </tabla_redes_inalambricas>
 
 </pdf_redes>
