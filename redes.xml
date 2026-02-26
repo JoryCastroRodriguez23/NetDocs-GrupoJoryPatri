@@ -231,24 +231,419 @@
         </tabla_comparativa>
     </seccion>
 
-  <!-- SECCIÓN: PROTOCOLOS JORY LITSY CASTRO RODRIGUEZ -->
+  <!-- SECCI├ôN: PROTOCOLOS JORY LITSY CASTRO RODRIGUEZ -->
   <seccion id="seccion_protocolos" categoria="PROTOCOLOS">
-    <titulo></titulo>
+    <titulo>Protocolos de Comunicaci├│n: Las Reglas del Juego Digital</titulo>
+    <descripcion>
+            Los protocolos son conjuntos de reglas estandarizadas que definen c├│mo los dispositivos se comunican en una red.
+            Sin estos acuerdos universales, los diferentes sistemas no podr├¡an entenderse entre s├¡, haciendo imposible la comunicaci├│n global.
+        </descripcion>
+
+        <protocolos_transporte>
+            <titulo>Protocolos de Transporte</titulo>
+
+            <protocolo id="tcp">
+                <nombre>TCP (Transmission Control Protocolo)</nombre>
+                <tipo_conexion>Orientado a conexi├│n: Establece un "canal" antes de transmitir (triple apret├│n de manos: SYN, SYN-ACK, ACK).</tipo_conexion>
+                <fiabilidad>Fiable: Verifica que todos los datos lleguen y en el orden correcto. Si faltan paquetes, los retransmite autom├íticamente.</fiabilidad>
+                <usos>Navegaci├│n web (HTTP/HTTPS), correo electr├│nico (SMTP/IMAP), descarga de archivos (FTP), SSH. Cualquier aplicaci├│n donde la integridad de datos es cr├¡tica.</usos>
+                <desventaja>Mayor latencia debido a las confirmaciones.</desventaja>
+            </protocolo>
+
+            <protocolo id="udp">
+                <nombre>UDP (User Datagram Protocolo)</nombre>
+                <tipo_conexion>Sin conexi├│n: "Dispara y olvida". No establece canal previo.</tipo_conexion>
+                <fiabilidad>No fiable: No garantiza entrega ni orden. No hay retransmisiones autom├íticas.</fiabilidad>
+                <usos>Streaming de video/audio (Netflix, Spotify), videollamadas (Zoom, Teams), juegos online multijugador, DNS. Aplicaciones donde la velocidad es m├ís importante que la perfecci├│n.</usos>
+                <ventaja>M├¡nima latencia, ideal para tiempo real.</ventaja>
+            </protocolo>
+        </protocolos_transporte>
+
+        <protocolos_aplicacion_red>
+            <titulo>Protocolos de Aplicaci├│n y Red</titulo>
+
+            <protocolo id="ip">
+                <nombre>IP (Internet Protocolo)</nombre>
+                <descripcion>
+                    El "GPS" de Internet. Direccionamiento l├│gico (ej: 192.168.1.1) y enrutamiento de paquetes.
+                    Define c├│mo fragmentar datos y c├│mo los routers determinan la mejor ruta hacia el destino.
+                </descripcion>
+            </protocolo>
+
+            <protocolo id="http_https">
+                <nombre>HTTP/HTTPS</nombre>
+                <descripcion_http>HTTP: Protocolo de transferencia de hipertexto. Base de la web.</descripcion_http>
+                <descripcion_https>
+                    HTTPS: HTTP + cifrado SSL/TLS. Protege datos sensibles (contrase├▒as, tarjetas de cr├®dito).
+                    El candado en el navegador indica HTTPS activo.
+                </descripcion_https>
+            </protocolo>
+
+            <protocolo id="smtp_imap_pop3">
+                <nombre>SMTP/IMAP/POP3</nombre>
+                <smtp>SMTP: Env├¡o de correos.</smtp>
+                <imap>IMAP: Recepci├│n sincronizada (mensajes en servidor).</imap>
+                <pop3>POP3: Recepci├│n descargando al dispositivo local.</pop3>
+                <recomendacion>IMAP es el est├índar moderno recomendado.</recomendacion>
+            </protocolo>
+
+            <protocolo id="dns">
+                <nombre>DNS (Domain Name System)</nombre>
+                <descripcion>
+                    Traduce nombres de dominio legibles (www.ejemplo.com) a direcciones IP num├®ricas (93.184.216.34).
+                    La "gu├¡a telef├│nica" de Internet. Sin DNS tendr├¡amos que memorizar n├║meros IP.
+                </descripcion>
+            </protocolo>
+        </protocolos_aplicacion_red>
+
+        <tabla_protocolos_comunicacion>
+            <titulo>Tabla de Protocolos de Comunicaci├│n</titulo>
+            <descripcion>Esta es fundamental para ver la diferencia entre "calidad" y "velocidad".</descripcion>
+            <comparativa>
+                <caracteristica id="tipo_conexion">
+                    <nombre>Tipo de conexi├│n</nombre>
+                    <tcp>Orientado a conexi├│n (requiere "saludo" previo)</tcp>
+                    <udp>Sin conexi├│n ("enviar y olvidar")</udp>
+                </caracteristica>
+                <caracteristica id="fiabilidad">
+                    <nombre><strong>Fiabilidad</strong></nombre>
+                    <tcp>Alta. Garantiza que los datos llegan. Reenv├¡a paquetes perdidos.</tcp>
+                    <udp>Baja. No garantiza la llegada. Si se pierde un paquete, se pierde.</udp>
+                </caracteristica>
+                <caracteristica id="orden">
+                    <nombre>Orden</nombre>
+                    <tcp>Reconstruye los datos en el orden exacto (secuencia).</tcp>
+                    <udp>No garantiza el orden de llegada.</udp>
+                </caracteristica>
+                <caracteristica id="velocidad">
+                    <nombre>Velocidad</nombre>
+                    <tcp>M├ís lento (mayor carga de control).</tcp>
+                    <udp>Muy r├ípido (baja latencia).</udp>
+                </caracteristica>
+                <caracteristica id="uso_ideal">
+                    <nombre>Uso ideal</nombre>
+                    <tcp>Web (HTTP), Correo, Descarga de archivos, Chats de texto.</tcp>
+                    <udp>Streaming de video, Llamadas VoIP, Juegos online.</udp>
+                </caracteristica>
+            </comparativa>
+        </tabla_protocolos_comunicacion>
   </seccion>
 
-  <!-- SECCIÓN: SEGURIDAD JORY LITSY CASTRO RODRIGUEZ -->
+  <!-- SECCI├ôN: SEGURIDAD JORY LITSY CASTRO RODRIGUEZ -->
   <seccion id="seccion_seguridad" categoria="SEGURIDAD">
-    <titulo></titulo>
+    <titulo>Seguridad en Protocolos y Redes</titulo>
+     <descripcion>
+            Proteger los datos en tr├ínsito y en reposo es fundamental en el mundo actual de ciberamenazas constantes.
+            Las redes modernas implementan m├║ltiples capas de seguridad para defenderse contra ataques cada vez m├ís sofisticados.
+        </descripcion>
+
+        <tecnologias_seguridad>
+            <titulo>Tecnolog├¡as de Seguridad</titulo>
+
+            <tecnologia id="https">
+                <nombre>HTTPS (HTTP Secure)</nombre>
+                <descripcion>
+                    Combina HTTP con cifrado SSL/TLS (Secure Sockets Layer / Transport Layer Security).
+                    Cifra toda la comunicaci├│n entre navegador y servidor web, protegiendo contrase├▒as,
+                    datos bancarios y comunicaciones privadas.
+                </descripcion>
+            </tecnologia>
+
+            <tecnologia id="vpn_ipsec">
+                <nombre>VPN / IPsec</nombre>
+                <descripcion>
+                    Las VPNs crean "t├║neles" cifrados sobre redes p├║blicas, permitiendo acceso remoto seguro.
+                    IPsec cifra cada paquete IP, protegiendo confidencialidad e integridad.
+                </descripcion>
+            </tecnologia>
+
+            <tecnologia id="firewalls">
+                <nombre>Firewalls</nombre>
+                <descripcion>
+                    Dispositivos o software que filtran el tr├ífico seg├║n reglas predefinidas.
+                    Bloquean accesos no autorizados y analizan IPs, puertos y protocolos.
+                </descripcion>
+            </tecnologia>
+
+            <tecnologia id="wpa3">
+                <nombre>WPA3</nombre>
+                <descripcion>
+                    Est├índar moderno de seguridad Wi-Fi. Mejora WPA2 con cifrado m├ís robusto
+                    y mayor protecci├│n contra ataques de fuerza bruta.
+                </descripcion>
+            </tecnologia>
+        </tecnologias_seguridad>
+
+        <principio_defensa_profundidad>
+            <titulo>Principio de Defensa en Profundidad</titulo>
+            <descripcion>
+                La seguridad no depende de una sola tecnolog├¡a, sino de m├║ltiples capas:
+                cifrado (HTTPS, VPN), control de acceso (Firewalls), seguridad Wi-Fi (WPA3),
+                actualizaciones y sistemas IDS/IPS.
+            </descripcion>
+        </principio_defensa_profundidad>
+
   </seccion>
 
-  <!-- SECCIÓN: TOPOLOGÍAS JORY LITSY CASTRO RODRIGUEZ -->
+  <!-- SECCI├ôN: TOPOLOG├ìAS JORY LITSY CASTRO RODRIGUEZ -->
   <seccion id="seccion_topologias" categoria="TOPOLOGIAS">
-    <titulo></titulo>
+    <titulo>Topolog├¡as de Red y Modos de Conexi├│n</titulo>
+    <descripcion>
+            La topolog├¡a define la estructura f├¡sica o l├│gica en la que est├ín conectados los dispositivos.
+            Cada topolog├¡a tiene ventajas, desventajas y casos de uso espec├¡ficos.
+        </descripcion>
+
+        <topologias>
+            <topologia id="bus">
+                <nombre>Bus</nombre>
+                <descripcion>Un solo cable central (backbone) al que todos los dispositivos se conectan.</descripcion>
+                <ventaja>Simplicidad, bajo coste.</ventaja>
+                <desventaja>Si el cable central se rompe, toda la red cae.</desventaja>
+                <estado>Obsoleta actualmente, se usaba en redes Ethernet antiguas (10Base2).</estado>
+            </topologia>
+
+            <topologia id="estrella">
+                <nombre>Estrella</nombre>
+                <descripcion>Todos los dispositivos conectados a un punto central (Switch o Hub).</descripcion>
+                <ventaja>Si falla un cable, solo ese dispositivo se desconecta; el resto funciona. F├ícil diagn├│stico y escalabilidad.</ventaja>
+                <desventaja>El punto central es cr├¡tico.</desventaja>
+                <estado>Est├índar actual en LANs Ethernet.</estado>
+            </topologia>
+
+            <topologia id="anillo">
+                <nombre>Anillo</nombre>
+                <descripcion>Circuito cerrado donde los datos viajan en una direcci├│n (o bidireccional en anillo dual). Cada nodo regenera la se├▒al.</descripcion>
+                <ventaja>Flujo de datos ordenado (sin colisiones).</ventaja>
+                <desventaja>Si un nodo falla, puede romper el ciclo (lento de recuperar).</desventaja>
+                <uso_historico>Token Ring de IBM, FDDI en fibra ├│ptica. Poco com├║n hoy, reemplazada por estrella.</uso_historico>
+            </topologia>
+
+            <topologia id="malla">
+                <nombre>Malla (Mesh)</nombre>
+                <descripcion>Todos (o muchos) nodos conectados entre s├¡ directamente.</descripcion>
+                <ventaja>M├íxima redundancia y robustez. Si falla un enlace, los datos toman rutas alternativas.</ventaja>
+                <desventaja>Coste alto.</desventaja>
+                <uso>Redes cr├¡ticas (militares, sat├®lites), Internet backbone, redes de sensores.</uso>
+            </topologia>
+
+            <topologia id="arbol">
+                <nombre>├ürbol (Jer├írquica)</nombre>
+                <descripcion>M├║ltiples topolog├¡as en estrella conectadas jer├írquicamente a un backbone central.</descripcion>
+                <ventaja>Escalable, organizada por jerarqu├¡as (departamentos, plantas).</ventaja>
+                <uso>Edificios grandes, campus universitarios, empresas con estructura por divisiones.</uso>
+            </topologia>
+        </topologias>
+
+        <modos_conexion>
+            <titulo>Modos de Conexi├│n (L├│gica de Comunicaci├│n)</titulo>
+
+            <modo id="orientado_conexion">
+                <nombre>Orientado a Conexi├│n (Connection-Oriented)</nombre>
+                <protocolo_ejemplo>TCP</protocolo_ejemplo>
+                <funcionamiento>"Llama antes de hablar". Establece un canal dedicado mediante triple apret├│n de manos (SYN, SYN-ACK, ACK) antes de transmitir datos.</funcionamiento>
+                <caracteristicas>Garantiza orden y llegada de datos. Retransmite paquetes perdidos. Control de flujo y congesti├│n.</caracteristicas>
+                <ventajas>Alta fiabilidad, integridad garantizada.</ventajas>
+                <desventajas>Mayor latencia debido a confirmaciones y establecimiento de sesi├│n.</desventajas>
+            </modo>
+
+            <modo id="sin_conexion">
+                <nombre>Sin Conexi├│n (Connectionless)</nombre>
+                <protocolo_ejemplo>UDP</protocolo_ejemplo>
+                <funcionamiento>"Env├¡a y olvida". No establece sesi├│n previa. Cada paquete viaja independientemente.</funcionamiento>
+                <caracteristicas>No confirma recepci├│n. No garantiza orden ni entrega.</caracteristicas>
+                <ventajas>M├íxima velocidad, m├¡nima latencia, ideal para tiempo real.</ventajas>
+                <desventajas>Puede perder datos. La aplicaci├│n debe manejar posibles p├®rdidas.</desventajas>
+                <uso_ideal>Streaming, videollamadas, juegos online donde velocidad perfecci├│n.</uso_ideal>
+            </modo>
+        </modos_conexion>
+
+        <tabla_topologias>
+            <titulo>Tabla de Topolog├¡as de Red</titulo>
+            <descripcion>Aqu├¡ se contrastan las formas f├¡sicas de conectar los equipos.</descripcion>
+
+            <fila id="top_bus">
+                <topologia>Bus</topologia>
+                <descripcion_visual>Un solo cable central (troncal) con dispositivos a los lados.</descripcion_visual>
+                <ventaja_principal>Muy barato y f├ícil de instalar.</ventaja_principal>
+                <desventaja_principal>Si el cable central se rompe, toda la red cae.</desventaja_principal>
+            </fila>
+
+            <fila id="top_estrella">
+                <topologia>Estrella</topologia>
+                <descripcion_visual>Todos los cables van a un punto central (Switch).</descripcion_visual>
+                <ventaja_principal>F├ícil de gestionar; si falla un PC, el resto sigue funcionando.</ventaja_principal>
+                <desventaja_principal>Depende totalmente del Switch central; es m├ís costoso en cableado.</desventaja_principal>
+            </fila>
+
+            <fila id="top_anillo">
+                <topologia>Anillo</topologia>
+                <descripcion_visual>C├¡rculo cerrado de dispositivos.</descripcion_visual>
+                <ventaja_principal>Flujo de datos ordenado (sin colisiones).</ventaja_principal>
+                <desventaja_principal>Si un nodo falla, puede romper el ciclo (lento de recuperar).</desventaja_principal>
+            </fila>
+
+            <fila id="top_malla">
+                <topologia>Malla</topologia>
+                <descripcion_visual>Conexiones m├║ltiples entre todos los nodos.</descripcion_visual>
+                <ventaja_principal>Robustez total. Si falla una ruta, hay otras.</ventaja_principal>
+                <desventaja_principal>Es la m├ís cara y compleja de instalar.</desventaja_principal>
+            </fila>
+        </tabla_topologias>
   </seccion>
 
-  <!-- SECCIÓN: HARDWARE JORY LITSY CASTRO RODRIGUEZ -->
+  <!-- SECCI├ôN: HARDWARE JORY LITSY CASTRO RODRIGUEZ -->
   <seccion id="seccion_hardware" categoria="HARDWARE">
-    <titulo></titulo>
+    <titulo>Componentes de Hardware en Redes Inform├íticas</titulo>
   </seccion>
+
+   <descripcion>
+            Una red funcional requiere diversos componentes de hardware especializados, desde los medios f├¡sicos que transportan se├▒ales
+            hasta los dispositivos inteligentes que dirigen el tr├ífico.
+        </descripcion>
+
+        <medios_transmision_cableados>
+            <titulo>Medios de Transmisi├│n Cableados</titulo>
+
+            <medio id="par_trenzado">
+                <nombre>Cable Par Trenzado (Cobre)</nombre>
+                <categorias>
+                    <categoria id="cat5e">
+                        <nombre>Cat 5e</nombre>
+                        <velocidad>Hasta 1 Gbps</velocidad>
+                        <distancia>100m m├íx</distancia>
+                        <uso>Hogares, oficinas peque├▒as. Econ├│mico y suficiente para la mayor├¡a.</uso>
+                    </categoria>
+                    <categoria id="cat6">
+                        <nombre>Cat 6</nombre>
+                        <velocidad>Hasta 10 Gbps en 55m, 1 Gbps en 100m</velocidad>
+                        <uso>Oficinas profesionales, estudios de dise├▒o. Mejor blindaje contra interferencias.</uso>
+                    </categoria>
+                    <categoria id="cat6a_7">
+                        <nombre>Cat 6a/7</nombre>
+                        <velocidad>10 Gbps sostenidos en 100m</velocidad>
+                        <uso>Datacenters, infraestructuras exigentes. M├íximo blindaje (S/FTP).</uso>
+                    </categoria>
+                </categorias>
+            </medio>
+
+            <medio id="fibra_optica_hw">
+                <nombre>Fibra ├ôptica (Transmisi├│n por Luz)</nombre>
+                <tipos>
+                    <tipo id="monomodo">
+                        <nombre>Monomodo (SMF)</nombre>
+                        <nucleo>9 micr├│metros</nucleo>
+                        <caracteristica>Un solo haz de luz</caracteristica>
+                        <distancias>40-100+ km sin repetidores</distancias>
+                        <uso>Enlaces troncales ISP, conexiones entre ciudades, cables submarinos intercontinentales. L├íser de alta precisi├│n.</uso>
+                    </tipo>
+                    <tipo id="multimodo">
+                        <nombre>Multimodo (MMF)</nombre>
+                        <nucleo>50-62.5 micr├│metros</nucleo>
+                        <caracteristica>M├║ltiples haces de luz</caracteristica>
+                        <distancias>Hasta 2 km</distancias>
+                        <uso>Campus, edificios, datacenters internos. LED m├ís econ├│mico.</uso>
+                        <velocidades>10/40/100 Gbps</velocidades>
+                    </tipo>
+                </tipos>
+                <ventajas>Inmunidad total a interferencias electromagn├®ticas, sin diafon├¡a, distancias enormes, ancho de banda masivo (Terabits/s), seguridad (dif├¡cil interceptar luz).</ventajas>
+                <desventaja>Coste inicial m├ís alto, requiere t├®cnicos especializados para empalmes.</desventaja>
+            </medio>
+        </medios_transmision_cableados>
+
+        <evolucion_wifi>
+            <titulo>Evoluci├│n de los Est├índares Wi-Fi (802.11)</titulo>
+            <descripcion>El Wi-Fi ha evolucionado dram├íticamente en velocidad, eficiencia y capacidad de gestionar dispositivos simult├íneos.</descripcion>
+
+            <estandar id="wifi_bg" orden="1">
+                <nombre>802.11b/g</nombre>
+                <banda>2.4 GHz</banda>
+                <velocidad>11-54 Mbps</velocidad>
+                <problema>Banda saturad├¡sima (interferencias con microondas, Bluetooth, tel├®fonos inal├ímbricos).</problema>
+                <estado>Obsoleto.</estado>
+            </estandar>
+
+            <estandar id="wifi_n" orden="2">
+                <nombre>802.11n (Wi-Fi 4)</nombre>
+                <banda>Dual: 2.4 y 5 GHz</banda>
+                <velocidad>Hasta 600 Mbps</velocidad>
+                <tecnologia>Introduce MIMO (Multiple Input Multiple Output): m├║ltiples antenas para mejor rendimiento.</tecnologia>
+                <nota>Gran avance en velocidad.</nota>
+            </estandar>
+
+            <estandar id="wifi_ac" orden="3">
+                <nombre>802.11ac (Wi-Fi 5)</nombre>
+                <banda>Solo 5 GHz</banda>
+                <velocidad>Hasta 3.5 Gbps</velocidad>
+                <tecnologia>MU-MIMO (Multi-User MIMO) y Beamforming.</tecnologia>
+                <periodo>Est├índar dominante 2013-2019.</periodo>
+            </estandar>
+
+            <estandar id="wifi_ax" orden="4">
+                <nombre>802.11ax (Wi-Fi 6/6E)</nombre>
+                <bandas>2.4, 5 y 6 GHz (6E)</bandas>
+                <velocidad>Hasta 9.6 Gbps</velocidad>
+                <tecnologia>OFDMA y TWT (Target Wake Time) para eficiencia y ahorro en IoT.</tecnologia>
+                <uso_ideal>Ambientes densos: estadios, aeropuertos, hogares con 50+ dispositivos IoT.</uso_ideal>
+                <nota>El futuro es Wi-Fi 6E.</nota>
+            </estandar>
+        </evolucion_wifi>
+
+        <tabla_componentes_red>
+            <titulo>Tabla de Componentes de una Red</titulo>
+            <descripcion>Para diferenciar r├ípidamente entre los tipos de cables y ondas.</descripcion>
+
+            <fila id="comp_utp">
+                <medio>Cable Par Trenzado (UTP)</medio>
+                <tipo>Guiado (Cobre)</tipo>
+                <velocidad_alcance>1 Gbps - 10 Gbps (Corto alcance &lt;100m)</velocidad_alcance>
+                <caso_uso>Redes LAN de oficinas, conexi├│n de PC a Switch.</caso_uso>
+            </fila>
+
+            <fila id="comp_fibra">
+                <medio>Fibra ├ôptica</medio>
+                <tipo>Guiado (Luz)</tipo>
+                <velocidad_alcance>&gt;100 Gbps (Largo alcance, kms)</velocidad_alcance>
+                <caso_uso>Redes troncales (WAN), conexiones entre edificios o ciudades.</caso_uso>
+            </fila>
+
+            <fila id="comp_wifi">
+                <medio>Wi-Fi (802.11)</medio>
+                <tipo>No Guiado (Radio)</tipo>
+                <velocidad_alcance>Variable (depende de obst├ículos)</velocidad_alcance>
+                <caso_uso>Dispositivos m├│viles, port├ítiles, zonas comunes.</caso_uso>
+            </fila>
+
+            <fila id="comp_microondas">
+                <medio>Microondas</medio>
+                <tipo>No Guiado (Ondas)</tipo>
+                <velocidad_alcance>Largo alcance (l├¡nea de vista)</velocidad_alcance>
+                <caso_uso>Conectar dos edificios lejanos sin poner cables f├¡sicos.</caso_uso>
+            </fila>
+        </tabla_componentes_red>
+
+        <tabla_redes_inalambricas>
+            <titulo>Tabla de Redes Inal├ímbricas</titulo>
+
+            <fila id="wifi_tabla_n">
+                <estandar>802.11n</estandar>
+                <nombre_comun>Wi-Fi 4</nombre_comun>
+                <frecuencia>2.4 GHz y 5 GHz</frecuencia>
+                <caracteristica_clave>Primer gran salto de velocidad (MIMO).</caracteristica_clave>
+            </fila>
+
+            <fila id="wifi_tabla_ac">
+                <estandar>802.11ac</estandar>
+                <nombre_comun>Wi-Fi 5</nombre_comun>
+                <frecuencia>Solo 5 GHz</frecuencia>
+                <caracteristica_clave>Alta velocidad, ideal para video HD.</caracteristica_clave>
+            </fila>
+
+            <fila id="wifi_tabla_ax">
+                <estandar>802.11ax</estandar>
+                <nombre_comun>Wi-Fi 6</nombre_comun>
+                <frecuencia>2.4 GHz y 5 GHz</frecuencia>
+                <caracteristica_clave>Eficiencia. Dise├▒ado para muchos dispositivos a la vez (IoT).</caracteristica_clave>
+            </fila>
+        </tabla_redes_inalambricas>
 
 </pdf_redes>
