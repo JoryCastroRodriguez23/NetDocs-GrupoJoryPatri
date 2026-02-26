@@ -181,8 +181,55 @@
 
   <!-- PDF 5: MODELO TCP/IP PATRICIA AGUADO MARIN -->
   <seccion id="seccion_tcpip" categoria="TCP_IP">
-    <titulo></titulo>
-  </seccion>
+        <titulo>Modelo TCP/IP: El Estándar Práctico de Internet</titulo>
+        <descripcion>El modelo TCP/IP es el marco práctico sobre el que funciona Internet y la mayoría de redes modernas. A diferencia del modelo OSI (que es teórico y educativo), TCP/IP se desarrolló para implementación real y agrupa las 7 capas OSI en solo 4 capas funcionales más simples.</descripcion>
+        <tabla_comparativa>
+            <titulo>Tabla de Arquitectura de Red: Modelos OSI y TCP/IP</titulo>
+            <descripcion>Esta tabla ayuda a visualizar cómo el modelo TCP/IP agrupa las funciones del modelo OSI.</descripcion>
+            <fila id="fila_01">
+                <capa_osi>Aplicación</capa_osi>
+                <funcion_principal>Interfaz con el usuario</funcion_principal>
+                <capa_tcpip>Aplicación</capa_tcpip>
+                <protocolos_comunes>HTTP, SMTP, FTP</protocolos_comunes>
+            </fila>
+            <fila id="fila_02">
+                <capa_osi>Presentación</capa_osi>
+                <funcion_principal>Cifrado y formatos (JPG, SSL)</funcion_principal>
+                <capa_tcpip>Incluido en Aplicación</capa_tcpip>
+                <protocolos_comunes>SSL/TLS, JPEG, ASCII</protocolos_comunes>
+            </fila>
+            <fila id="fila_03">
+                <capa_osi>Sesión</capa_osi>
+                <funcion_principal>Control de diálogo</funcion_principal>
+                <capa_tcpip>Incluido en Aplicación</capa_tcpip>
+                <protocolos_comunes>RPC, NetBIOS</protocolos_comunes>
+            </fila>
+            <fila id="fila_04">
+                <capa_osi>Transporte</capa_osi>
+                <funcion_principal>Fiabilidad y segmentación</funcion_principal>
+                <capa_tcpip>Transporte</capa_tcpip>
+                <protocolos_comunes>TCP, UDP</protocolos_comunes>
+            </fila>
+            <fila id="fila_05">
+                <capa_osi>Red</capa_osi>
+                <funcion_principal>Enrutamiento (La mejor ruta)</funcion_principal>
+                <capa_tcpip>Internet</capa_tcpip>
+                <protocolos_comunes>IP, ICMP, OSPF</protocolos_comunes>
+            </fila>
+            <fila id="fila_06">
+                <capa_osi>Enlace de Datos</capa_osi>
+                <funcion_principal>Acceso al medio y MAC</funcion_principal>
+                <capa_tcpip>Acceso a la Red</capa_tcpip>
+                <protocolos_comunes>Ethernet, Wi-Fi, ARP</protocolos_comunes>
+            </fila>
+            <fila id="fila_07">
+                <capa_osi>Física</capa_osi>
+                <funcion_principal>Cables y señales eléctricas</funcion_principal>
+                <capa_tcpip>Incluido en Acceso a la Red</capa_tcpip>
+                <protocolos_comunes>Cables UTP, Fibra, Hubs</protocolos_comunes>
+            </fila>
+        </tabla_comparativa>
+    </seccion>
 
   <!-- SECCIÓN: PROTOCOLOS JORY LITSY CASTRO RODRIGUEZ -->
   <seccion id="seccion_protocolos" categoria="PROTOCOLOS">
