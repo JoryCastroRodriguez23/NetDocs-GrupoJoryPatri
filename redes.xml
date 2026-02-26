@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="viewer.xslt"?>
+<?xml-stylesheet type="text/xsl" href="estilo.xsl"?>
 <pdf_redes>
 
   <!-- PDF 0: PORTADA PATRICIA AGUADO MARIN & JORY LITSY CASTRO RODRIGUEZ -->
@@ -36,7 +36,100 @@
 
   <!-- SECCIÓN: PROTOCOLOS JORY LITSY CASTRO RODRIGUEZ -->
   <seccion id="seccion_protocolos" categoria="PROTOCOLOS">
-    <titulo></titulo>
+    <titulo>Protocolos de Comunicación: Las Reglas del Juego Digital</titulo>
+    <descripcion>
+            Los protocolos son conjuntos de reglas estandarizadas que definen cómo los dispositivos se comunican en una red.
+            Sin estos acuerdos universales, los diferentes sistemas no podrían entenderse entre sí, haciendo imposible la comunicación global.
+        </descripcion>
+
+        <protocolos_transporte>
+            <titulo>Protocolos de Transporte</titulo>
+
+            <protocolo id="tcp">
+                <nombre>TCP (Transmission Control Protocolo)</nombre>
+                <tipo_conexion>Orientado a conexión: Establece un "canal" antes de transmitir (triple apretón de manos: SYN, SYN-ACK, ACK).</tipo_conexion>
+                <fiabilidad>Fiable: Verifica que todos los datos lleguen y en el orden correcto. Si faltan paquetes, los retransmite automáticamente.</fiabilidad>
+                <usos>Navegación web (HTTP/HTTPS), correo electrónico (SMTP/IMAP), descarga de archivos (FTP), SSH. Cualquier aplicación donde la integridad de datos es crítica.</usos>
+                <desventaja>Mayor latencia debido a las confirmaciones.</desventaja>
+            </protocolo>
+
+            <protocolo id="udp">
+                <nombre>UDP (User Datagram Protocolo)</nombre>
+                <tipo_conexion>Sin conexión: "Dispara y olvida". No establece canal previo.</tipo_conexion>
+                <fiabilidad>No fiable: No garantiza entrega ni orden. No hay retransmisiones automáticas.</fiabilidad>
+                <usos>Streaming de video/audio (Netflix, Spotify), videollamadas (Zoom, Teams), juegos online multijugador, DNS. Aplicaciones donde la velocidad es más importante que la perfección.</usos>
+                <ventaja>Mínima latencia, ideal para tiempo real.</ventaja>
+            </protocolo>
+        </protocolos_transporte>
+
+        <protocolos_aplicacion_red>
+            <titulo>Protocolos de Aplicación y Red</titulo>
+
+            <protocolo id="ip">
+                <nombre>IP (Internet Protocolo)</nombre>
+                <descripcion>
+                    El "GPS" de Internet. Direccionamiento lógico (ej: 192.168.1.1) y enrutamiento de paquetes.
+                    Define cómo fragmentar datos y cómo los routers determinan la mejor ruta hacia el destino.
+                </descripcion>
+            </protocolo>
+
+            <protocolo id="http_https">
+                <nombre>HTTP/HTTPS</nombre>
+                <descripcion_http>HTTP: Protocolo de transferencia de hipertexto. Base de la web.</descripcion_http>
+                <descripcion_https>
+                    HTTPS: HTTP + cifrado SSL/TLS. Protege datos sensibles (contraseñas, tarjetas de crédito).
+                    El candado en el navegador indica HTTPS activo.
+                </descripcion_https>
+            </protocolo>
+
+            <protocolo id="smtp_imap_pop3">
+                <nombre>SMTP/IMAP/POP3</nombre>
+                <smtp>SMTP: Envío de correos.</smtp>
+                <imap>IMAP: Recepción sincronizada (mensajes en servidor).</imap>
+                <pop3>POP3: Recepción descargando al dispositivo local.</pop3>
+                <recomendacion>IMAP es el estándar moderno recomendado.</recomendacion>
+            </protocolo>
+
+            <protocolo id="dns">
+                <nombre>DNS (Domain Name System)</nombre>
+                <descripcion>
+                    Traduce nombres de dominio legibles (www.ejemplo.com) a direcciones IP numéricas (93.184.216.34).
+                    La "guía telefónica" de Internet. Sin DNS tendríamos que memorizar números IP.
+                </descripcion>
+            </protocolo>
+        </protocolos_aplicacion_red>
+
+        <tabla_protocolos_comunicacion>
+            <titulo>Tabla de Protocolos de Comunicación</titulo>
+            <descripcion>Esta es fundamental para ver la diferencia entre "calidad" y "velocidad".</descripcion>
+            <comparativa>
+                <caracteristica id="tipo_conexion">
+                    <nombre>Tipo de conexión</nombre>
+                    <tcp>Orientado a conexión (requiere "saludo" previo)</tcp>
+                    <udp>Sin conexión ("enviar y olvidar")</udp>
+                </caracteristica>
+                <caracteristica id="fiabilidad">
+                    <nombre><strong>Fiabilidad</strong></nombre>
+                    <tcp>Alta. Garantiza que los datos llegan. Reenvía paquetes perdidos.</tcp>
+                    <udp>Baja. No garantiza la llegada. Si se pierde un paquete, se pierde.</udp>
+                </caracteristica>
+                <caracteristica id="orden">
+                    <nombre>Orden</nombre>
+                    <tcp>Reconstruye los datos en el orden exacto (secuencia).</tcp>
+                    <udp>No garantiza el orden de llegada.</udp>
+                </caracteristica>
+                <caracteristica id="velocidad">
+                    <nombre>Velocidad</nombre>
+                    <tcp>Más lento (mayor carga de control).</tcp>
+                    <udp>Muy rápido (baja latencia).</udp>
+                </caracteristica>
+                <caracteristica id="uso_ideal">
+                    <nombre>Uso ideal</nombre>
+                    <tcp>Web (HTTP), Correo, Descarga de archivos, Chats de texto.</tcp>
+                    <udp>Streaming de video, Llamadas VoIP, Juegos online.</udp>
+                </caracteristica>
+            </comparativa>
+        </tabla_protocolos_comunicacion>
   </seccion>
 
   <!-- SECCIÓN: SEGURIDAD JORY LITSY CASTRO RODRIGUEZ -->
